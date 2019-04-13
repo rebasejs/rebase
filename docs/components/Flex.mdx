@@ -1,0 +1,24 @@
+---
+name: Flex
+menu: Components
+route: /components/flex
+---
+
+import { Playground } from 'docz'
+
+import { Flex, Box } from '../../src'
+
+# Flex
+
+## Basic usage
+
+<Playground>
+  <Flex flexWrap="wrap">
+    <Box p={3} width={[1, 1, 1 / 2]} variant="success">
+      Box
+    </Box>
+    <Box p={3} width={[1, 1, 1 / 2]} variant="danger">
+      Box
+    </Box>
+  </Flex>
+</Playground>

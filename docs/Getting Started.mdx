@@ -1,0 +1,69 @@
+---
+name: Getting Started
+route: /
+---
+
+import { Link } from 'docz'
+
+# Getting Started
+
+Set of UI components built for [React][] with [styled-components][] and [styled-system][].
+
+[![Build Status][badge]][travis]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][npm]
+[![Version][version-badge]][npm]
+[![MIT License][license-badge]](LICENSE.md)
+
+[badge]: https://flat.badgen.net/travis/rebasejs/rebase/master
+[travis]: https://travis-ci.org/rebasejs/rebase
+[coverage-badge]: https://flat.badgen.net/codecov/c/github/rebasejs/rebase
+[coverage]: https://codecov.io/github/rebasejs/rebase
+[downloads-badge]: https://flat.badgen.net/npm/dw/@rebasejs/rebase
+[version-badge]: https://flat.badgen.net/npm/v/@rebasejs/rebase
+[license-badge]: https://flat.badgen.net/badge/license/MIT/blue
+[npm]: https://npmjs.com/package/@rebasejs/rebase
+
+## Installation
+
+```bash
+npm i @rebasejs/rebase
+```
+
+## Components
+
+- <Link to="/components/badge">Badge</Link>
+- <Link to="/components/box">Box</Link>
+- <Link to="/components/button">Button</Link>
+- <Link to="/components/flex">Flex</Link>
+- <Link to="/components/heading">Heading</Link>
+- <Link to="/components/image">Image</Link>
+- <Link to="/components/link">Link</Link>
+- <Link to="/components/text">Text</Link>
+
+## Usage
+
+```jsx
+import React from 'react'
+import { Box, Heading, Button } from '@rebasejs/rebase'
+
+export default () => (
+  <Box>
+    <Heading>Hello</Heading>
+    <Button variant="primary">Rebase</Button>
+  </Box>
+)
+```
+
+### Related
+
+- [React][]
+- [styled-system][]
+- [styled-components][]
+- [polished][]
+
+[https://rebasejs.com]: https://rebasejs.com
+[react]: https://reactjs.org/
+[styled-components]: https://www.styled-components.com/
+[styled-system]: https://styled-system.com/
+[polished]: https://polished.js.org/

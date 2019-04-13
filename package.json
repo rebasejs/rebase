@@ -1,0 +1,63 @@
+{
+  "name": "@rebasejs/rebase",
+  "version": "1.0.0",
+  "description": "Set of UI components built for React with styled-components and styled-system.",
+  "main": "dist/index.js",
+  "repository": "git@github.com:rebasejs/rebase.git",
+  "author": "Rafael Franco <rafaelfr@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "yarn clean && babel src -d dist",
+    "clean": "rm -rf dist .docz",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:deploy": "gh-pages -d .docz/dist",
+    "cover": "jest --coverage && npx codecov",
+    "test": "jest"
+  },
+  "dependencies": {
+    "polished": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "styled-components": "^4.2.0",
+    "styled-system": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.7.1",
+    "docz": "^1.0.0",
+    "docz-theme-default": "^1.0.0",
+    "gh-pages": "^2.0.1",
+    "jest": "^24.5.0",
+    "jest-styled-components": "^6.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js"
+    ],
+    "setupFilesAfterEnv": [
+      "jest-styled-components"
+    ],
+    "coverageReporters": [
+      "html",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ]
+  }
+}
