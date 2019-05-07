@@ -12,7 +12,8 @@
     "dev": "docz dev",
     "build": "docz build",
     "cover": "jest --coverage && npx codecov",
-    "test": "jest"
+    "test": "jest",
+    "commit": "git-cz"
   },
   "dependencies": {
     "polished": "^3.2.0",
@@ -28,6 +29,7 @@
     "babel-jest": "^24.7.1",
     "docz": "^1.0.4",
     "docz-theme-default": "^1.0.4",
+    "git-cz": "^3.0.1",
     "jest": "^24.5.0",
     "jest-styled-components": "^6.3.1",
     "react": "^16.8.6",
@@ -57,5 +59,10 @@
       "/node_modules/",
       "/dist/"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   }
 }
