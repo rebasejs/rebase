@@ -1,9 +1,9 @@
 export default {
-  menu: ['Getting Started', 'Components'],
+  menu: ["Getting Started", "Components"],
   themeConfig: {
     colors: {
-      primary: 'salmon',
-      link: 'salmon',
+      primary: "salmon",
+      link: "salmon"
     }
   }
 }

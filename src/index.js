@@ -1,8 +1,8 @@
-export { Badge } from './Badge'
-export { Box } from './Box'
-export { Button } from './Button'
-export { Flex } from './Flex'
-export { Heading } from './Heading'
-export { Image } from './Image'
-export { Link } from './Link'
-export { Text } from './Text'
+export { Badge } from "./Badge"
+export { Box } from "./Box"
+export { Button } from "./Button"
+export { Flex } from "./Flex"
+export { Heading } from "./Heading"
+export { Image } from "./Image"
+export { Link } from "./Link"
+export { Text } from "./Text"

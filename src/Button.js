@@ -1,18 +1,18 @@
-import styled from 'styled-components'
-import { fontWeight, borders, borderColor, borderRadius, variant } from 'styled-system'
+import styled from "styled-components"
+import { fontWeight, borders, borderColor, borderRadius, variant } from "styled-system"
 
-import { Box } from './Box'
+import { Box } from "./Box"
 
-const buttons = variant({ key: 'buttons' })
+const buttons = variant({ key: "buttons" })
 
 export const Button = styled(Box)(
   {
-    appearance: 'none',
-    display: 'inline-block',
-    textAlign: 'center',
-    lineHeight: 'inherit',
-    textDecoration: 'none',
-    outline: 'none'
+    appearance: "none",
+    display: "inline-block",
+    textAlign: "center",
+    lineHeight: "inherit",
+    textDecoration: "none",
+    outline: "none"
   },
   fontWeight,
   borders,
@@ -30,8 +30,8 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  as: 'button',
-  fontSize: 'inherit',
+  as: "button",
+  fontSize: "inherit",
   m: 0,
   px: 3,
   py: 2,

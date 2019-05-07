@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 import {
   space,
   color,
@@ -9,13 +9,13 @@ import {
   alignSelf,
   fontSize,
   variant
-} from 'styled-system'
+} from "styled-system"
 
-const boxes = variant({ key: 'boxes' })
+const boxes = variant({ key: "boxes" })
 
-export const Box = styled('div')(
+export const Box = styled("div")(
   {
-    boxSizing: 'border-box'
+    boxSizing: "border-box"
   },
   space,
   width,

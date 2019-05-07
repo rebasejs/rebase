@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { fontFamily, fontWeight, textAlign, lineHeight, letterSpacing } from 'styled-system'
+import styled from "styled-components"
+import { fontFamily, fontWeight, textAlign, lineHeight, letterSpacing } from "styled-system"
 
-import { Box } from './Box'
+import { Box } from "./Box"
 
 export const Text = styled(Box)(fontFamily, fontWeight, textAlign, lineHeight, letterSpacing)
 
@@ -14,6 +14,6 @@ Text.propTypes = {
 }
 
 Text.defaultProps = {
-  as: 'p',
+  as: "p",
   m: 0
 }

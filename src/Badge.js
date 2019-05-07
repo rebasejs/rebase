@@ -1,14 +1,14 @@
-import styled from 'styled-components'
-import { variant } from 'styled-system'
+import styled from "styled-components"
+import { variant } from "styled-system"
 
-import { Box } from './Box'
+import { Box } from "./Box"
 
-const badges = variant({ key: 'badges' })
+const badges = variant({ key: "badges" })
 
 export const Badge = styled(Box)(
   {
-    display: 'inline-block',
-    textAlign: 'center',
+    display: "inline-block",
+    textAlign: "center",
     borderRadius: 9999
   },
   badges
