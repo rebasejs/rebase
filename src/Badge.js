@@ -1,6 +1,6 @@
 import styled from 'styled-components'
+import { variant } from 'styled-system'
 
-import { variant } from './utils'
 import { Box } from './Box'
 
 const badges = variant({ key: 'badges' })

@@ -7,6 +7,5 @@ export const Link = styled(Box)({
 })
 
 Link.defaultProps = {
-  as: 'a',
-  color: 'primary'
+  as: 'a'
 }

@@ -1,7 +1,15 @@
 import styled from 'styled-components'
-import { space, color, width, height, flex, order, alignSelf, fontSize } from 'styled-system'
-
-import { variant } from './utils'
+import {
+  space,
+  color,
+  width,
+  height,
+  flex,
+  order,
+  alignSelf,
+  fontSize,
+  variant
+} from 'styled-system'
 
 const boxes = variant({ key: 'boxes' })
 
