@@ -1,0 +1,87 @@
+---
+name: Theming
+route: /theming
+---
+
+import { Playground } from "docz"
+import { ThemeProvider } from "styled-components"
+
+import { Button } from "../src"
+
+# Theming
+
+Rebase has an easy and flexible theming. It comes with a default theme that automatically generates 7 variants for [Badges](/components/badge) and [Buttons](/components/button).
+
+## Default theme
+
+Rebase comes with the following default colors:
+
+```js
+ {
+    primary: "#6A5ACD",
+    success: "#00FA9A",
+    danger: "#FA8072",
+    warning: "#FFD700",
+    info: "#87CEFA",
+    light: "#F5F5F5",
+    dark: "#333333"
+}
+```
+
+## Creating a custom theme
+
+It's recommended to create a file named `theme.js` and export a object with your custom values for colors overriding the default ones.
+
+```js
+// theme.js
+export default {
+  colors: {
+    primary: "#FF8C69", // salmon
+    secondary: "cyan", // accepts css color codes as well
+    light: "#FFFFFF", // white
+    dark: "#000000" // black
+  }
+}
+```
+
+## Using your theme in your application
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+
+// import your custom theme
+import theme from "./theme.js"
+
+ReactDOM.render(
+    <ThemeProvider theme={theme}>
+        <App />
+    </ThemeProvider>, 
+    document.getElementById('root'))
+)
+```
+
+<Playground>
+    {() => {
+    const theme = {
+        colors: {
+            primary: "#FF8C69",
+            secondary: "cyan",
+            light: "#FFFFFF",
+            dark: "#000000"
+        }
+    }
+
+    return (
+        <ThemeProvider theme={theme}>
+            <>
+                <Button variant="primary">Primary button</Button>
+                <Button variant="secondary" ml={2}>Secondary button</Button>
+            </>
+        </ThemeProvider>
+    )
+
+}}
+
+</Playground>

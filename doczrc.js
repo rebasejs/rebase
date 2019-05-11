@@ -1,5 +1,5 @@
 export default {
-  menu: ["Getting Started", "Components"],
+  menu: ["Getting Started", "Theming", "Components"],
   themeConfig: {
     colors: {
       primary: "#6A5ACD",
