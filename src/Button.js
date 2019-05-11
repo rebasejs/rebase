@@ -1,5 +1,7 @@
 import styled from "styled-components"
-import { fontWeight, borders, borderColor, borderRadius, variant } from "styled-system"
+import { fontWeight, borders, borderColor, borderRadius } from "styled-system"
+
+import { variant, elementState } from "./utils"
 
 import { Box } from "./Box"
 
@@ -18,7 +20,8 @@ export const Button = styled(Box)(
   borders,
   borderColor,
   borderRadius,
-  buttons
+  buttons,
+  elementState
 )
 
 Button.propTypes = {
