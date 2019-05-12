@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { darken, lighten, transparentize, readableColor } from "polished"
 
-export const colors = {
+const colors = {
   primary: "#6A5ACD",
   success: "#00FA9A",
   danger: "#FA8072",

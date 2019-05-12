@@ -4,7 +4,18 @@ import { readableColor, darken, lighten } from "polished"
 import { ThemeProvider } from "styled-components"
 
 import { Badge, Box, Button, Flex, Heading, Image, Link, Text } from "../src"
-import { colors } from "../src/utils"
+
+// if I export the colors from my utils.js the docs will break because of the "__filemeta".
+// so I am hard coding it here
+const colors = {
+  primary: "#6A5ACD",
+  success: "#00FA9A",
+  danger: "#FA8072",
+  warning: "#FFD700",
+  info: "#87CEFA",
+  light: "#F5F5F5",
+  dark: "#333333"
+}
 
 const render = el => create(el)
 
