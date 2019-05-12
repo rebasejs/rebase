@@ -1,11 +1,29 @@
 import React from "react"
 import { create } from "react-test-renderer"
 import { readableColor, darken, lighten } from "polished"
+import { ThemeProvider } from "styled-components"
 
-import { Box, Flex, Text, Heading, Button, Link, Image } from "../src"
-import { variant, colors } from "../src/utils"
+import { Badge, Box, Button, Flex, Heading, Image, Link, Text } from "../src"
+import { colors } from "../src/utils"
 
 const render = el => create(el)
+
+describe("Badge", () => {
+  test("renders", () => {
+    const json = render(<Badge />).toJSON()
+    expect(json.type).toBe("div")
+  })
+
+  test("renders with correct border-radius", () => {
+    const json = render(<Badge as="header" />).toJSON()
+    expect(json).toHaveStyleRule("border-radius", "9999px")
+  })
+
+  test("renders with variant", () => {
+    const json = render(<Badge variant="info" />).toJSON()
+    expect(json).toHaveStyleRule("background", colors.info)
+  })
+})
 
 describe("Box", () => {
   test("renders", () => {
@@ -104,5 +122,21 @@ describe("Text", () => {
     expect(json.type).toBe("p")
     expect(json).toHaveStyleRule("text-align", "center")
     expect(json).toHaveStyleRule("font-weight", "bold")
+  })
+})
+
+describe("Custom theme", () => {
+  test("tests with theme provider", () => {
+    const theme = {
+      colors: {
+        primary: "#F15F15"
+      }
+    }
+    const json = render(
+      <ThemeProvider theme={theme}>
+        <Badge variant="primary" />
+      </ThemeProvider>
+    ).toJSON()
+    expect(json).toHaveStyleRule("background", "#F15F15")
   })
 })
