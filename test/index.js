@@ -1,7 +1,9 @@
 import React from "react"
 import { create } from "react-test-renderer"
+import { readableColor, darken, lighten } from "polished"
 
-import { theme, Box, Flex, Text, Heading, Button, Link, Image } from "../src"
+import { Box, Flex, Text, Heading, Button, Link, Image } from "../src"
+import { variant, colors } from "../src/utils"
 
 const render = el => create(el)
 
@@ -26,6 +28,15 @@ describe("Button", () => {
   test("renders", () => {
     const json = render(<Button />).toJSON()
     expect(json.type).toBe("button")
+  })
+
+  test("renders with primary variant", () => {
+    const json = render(<Button variant="primary" />).toJSON()
+    expect(json).toHaveStyleRule("background", colors.primary)
+    expect(json).toHaveStyleRule(
+      "color",
+      readableColor(colors.primary, darken(0.4, colors.primary), lighten(0.4, colors.primary))
+    )
   })
 
   test("renders disabled", () => {
