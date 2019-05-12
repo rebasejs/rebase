@@ -4,15 +4,12 @@ Set of UI components built for [React][] with [styled-components][] and [styled-
 
 Read the docs: [https://rebasejs.com][]
 
-[![Netlify Status](netlify-badge)](netlify)
 [![Build Status][badge]][travis]
 [![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][npm]
 [![Version][version-badge]][npm]
 [![MIT License][license-badge]](LICENSE.md)
 
-[netlify-badge]: https://api.netlify.com/api/v1/badges/92138a79-33c7-46fe-a8a5-60130a1fac18/deploy-status
-[netlify]: https://app.netlify.com/sites/rebasejs/deploys
 [badge]: https://flat.badgen.net/travis/rebasejs/rebase/master
 [travis]: https://travis-ci.org/rebasejs/rebase
 [coverage-badge]: https://flat.badgen.net/codecov/c/github/rebasejs/rebase
