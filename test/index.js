@@ -3,30 +3,9 @@ import { create } from 'react-test-renderer';
 import { readableColor, darken, lighten } from 'polished';
 import { ThemeProvider } from 'styled-components';
 
-import {
-  Badge,
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-} from '../src';
+import { Badge, Box, Button, Flex, Heading, Image, Link, Text } from '../src';
 
-// if I export the colors from my utils.js the docs will break because of the "__filemeta".
-// so I am hard coding it here
-const colors = {
-  primary: '#6A5ACD',
-  success: '#00FA9A',
-  danger: '#FA8072',
-  warning: '#FFD700',
-  info: '#87CEFA',
-  light: '#F5F5F5',
-  dark: '#333333',
-};
-
-const render = el => create(el);
+const render = (el) => create(el);
 
 describe('Badge', () => {
   test('renders', () => {
@@ -39,9 +18,9 @@ describe('Badge', () => {
     expect(json).toHaveStyleRule('border-radius', '9999px');
   });
 
-  test('renders with variant', () => {
-    const json = render(<Badge variant="info" />).toJSON();
-    expect(json).toHaveStyleRule('background', colors.info);
+  test('renders with bg', () => {
+    const json = render(<Badge bg="salmon" />).toJSON();
+    expect(json).toHaveStyleRule('background-color', 'salmon');
   });
 });
 
@@ -68,17 +47,9 @@ describe('Button', () => {
     expect(json.type).toBe('button');
   });
 
-  test('renders with primary variant', () => {
-    const json = render(<Button variant="primary" />).toJSON();
-    expect(json).toHaveStyleRule('background', colors.primary);
-    expect(json).toHaveStyleRule(
-      'color',
-      readableColor(
-        colors.primary,
-        darken(0.4, colors.primary),
-        lighten(0.4, colors.primary),
-      ),
-    );
+  test('renders with bg', () => {
+    const json = render(<Button bg="salmon" />).toJSON();
+    expect(json).toHaveStyleRule('background-color', 'salmon');
   });
 
   test('renders disabled', () => {
@@ -142,9 +113,7 @@ describe('Link', () => {
 
 describe('Text', () => {
   test('renders', () => {
-    const json = render(
-      <Text textAlign="center" fontWeight="bold" />,
-    ).toJSON();
+    const json = render(<Text textAlign="center" fontWeight="bold" />).toJSON();
     expect(json.type).toBe('p');
     expect(json).toHaveStyleRule('text-align', 'center');
     expect(json).toHaveStyleRule('font-weight', 'bold');
@@ -152,17 +121,70 @@ describe('Text', () => {
 });
 
 describe('Custom theme', () => {
-  test('tests with theme provider', () => {
-    const theme = {
+  test('renders with variant', () => {
+    const customTheme = {
       colors: {
         primary: '#F15F15',
       },
     };
     const json = render(
-      <ThemeProvider theme={theme}>
-        <Badge variant="primary" />
+      <ThemeProvider theme={customTheme}>
+        <Button variant="primary" />
       </ThemeProvider>,
     ).toJSON();
-    expect(json).toHaveStyleRule('background', '#F15F15');
+    expect(json).toHaveStyleRule('background', customTheme.colors.primary);
+    expect(json).toHaveStyleRule(
+      'color',
+      readableColor(
+        customTheme.colors.primary,
+        darken(0.4, customTheme.colors.primary),
+        lighten(0.4, customTheme.colors.primary),
+      ),
+    );
+  });
+
+  test('renders with bg props with color from theme', () => {
+    const customTheme = {
+      colors: {
+        primary: '#F15F15',
+      },
+    };
+    const json = render(
+      <ThemeProvider theme={customTheme}>
+        <Button bg="primary" />
+      </ThemeProvider>,
+    ).toJSON();
+    expect(json).toHaveStyleRule(
+      'background-color',
+      customTheme.colors.primary,
+    );
+  });
+
+  test('renders with bg props with css color', () => {
+    const customTheme = {
+      colors: {
+        primary: '#F15F15',
+      },
+    };
+    const json = render(
+      <ThemeProvider theme={customTheme}>
+        <Button bg="red" />
+      </ThemeProvider>,
+    ).toJSON();
+    expect(json).toHaveStyleRule('background-color', 'red');
+  });
+
+  test('renders with default bg props', () => {
+    const customTheme = {
+      colors: {
+        primary: '#F15F15',
+      },
+    };
+    const json = render(
+      <ThemeProvider theme={customTheme}>
+        <Button />
+      </ThemeProvider>,
+    ).toJSON();
+    expect(json).toHaveStyleRule('background-color', undefined);
   });
 });
