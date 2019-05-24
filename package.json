@@ -14,7 +14,8 @@
     "cover": "jest --coverage && npx codecov",
     "test": "jest",
     "lint": "eslint \"./**/*.js\"",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "polished": "^3.2.0",
