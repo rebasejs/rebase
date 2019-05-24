@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 import {
   space,
   color,
@@ -8,14 +8,14 @@ import {
   order,
   alignSelf,
   fontSize,
-  variant
-} from "styled-system"
+  variant,
+} from 'styled-system';
 
-const boxes = variant({ key: "boxes" })
+const boxes = variant({ key: 'boxes' });
 
-export const Box = styled("div")(
+const Box = styled('div')(
   {
-    boxSizing: "border-box"
+    boxSizing: 'border-box',
   },
   space,
   width,
@@ -25,8 +25,8 @@ export const Box = styled("div")(
   flex,
   order,
   alignSelf,
-  boxes
-)
+  boxes,
+);
 
 Box.propTypes = {
   ...space.propTypes,
@@ -37,5 +37,7 @@ Box.propTypes = {
   ...flex.propTypes,
   ...order.propTypes,
   ...alignSelf.propTypes,
-  ...boxes.propTypes
-}
+  ...boxes.propTypes,
+};
+
+export default Box;

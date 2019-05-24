@@ -1,25 +1,27 @@
-import styled from "styled-components"
-import { width, height, borderRadius } from "styled-system"
+import styled from 'styled-components';
+import { width, height, borderRadius } from 'styled-system';
 
-import { Box } from "./Box"
+import Box from './Box';
 
-export const Image = styled(Box)(
+const Image = styled(Box)(
   {
-    maxWidth: "100%",
-    height: "auto"
+    maxWidth: '100%',
+    height: 'auto',
   },
   width,
   height,
-  borderRadius
-)
+  borderRadius,
+);
 
 Image.propTypes = {
   ...width.propTypes,
   ...height.propTypes,
-  ...borderRadius.propTypes
-}
+  ...borderRadius.propTypes,
+};
 
 Image.defaultProps = {
-  as: "img",
-  m: 0
-}
+  as: 'img',
+  m: 0,
+};
+
+export default Image;

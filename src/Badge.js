@@ -1,26 +1,28 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
-import { variant } from "./utils"
+import { variant } from './utils';
 
-import { Box } from "./Box"
+import Box from './Box';
 
-const badges = variant({ key: "badges" })
+const badges = variant({ key: 'badges' });
 
-export const Badge = styled(Box)(
+const Badge = styled(Box)(
   {
-    display: "inline-block",
-    textAlign: "center",
-    borderRadius: 9999
+    display: 'inline-block',
+    textAlign: 'center',
+    borderRadius: 9999,
   },
-  badges
-)
+  badges,
+);
 
 Badge.propTypes = {
-  ...badges.propTypes
-}
+  ...badges.propTypes,
+};
 
 Badge.defaultProps = {
   fontSize: 0,
   px: 2,
-  py: 1
-}
+  py: 1,
+};
+
+export default Badge;

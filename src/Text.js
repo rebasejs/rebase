@@ -1,19 +1,33 @@
-import styled from "styled-components"
-import { fontFamily, fontWeight, textAlign, lineHeight, letterSpacing } from "styled-system"
+import styled from 'styled-components';
+import {
+  fontFamily,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  letterSpacing,
+} from 'styled-system';
 
-import { Box } from "./Box"
+import Box from './Box';
 
-export const Text = styled(Box)(fontFamily, fontWeight, textAlign, lineHeight, letterSpacing)
+const Text = styled(Box)(
+  fontFamily,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  letterSpacing,
+);
 
 Text.propTypes = {
   ...fontFamily.propTypes,
   ...fontWeight.propTypes,
   ...textAlign.propTypes,
   ...lineHeight.propTypes,
-  ...letterSpacing.propTypes
-}
+  ...letterSpacing.propTypes,
+};
 
 Text.defaultProps = {
-  as: "p",
-  m: 0
-}
+  as: 'p',
+  m: 0,
+};
+
+export default Text;
