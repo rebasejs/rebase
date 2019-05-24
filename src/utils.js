@@ -74,7 +74,7 @@ export const elementState = (props) => {
   theme = merge(theme, props.theme);
   const backgroundColor = props.variant
     ? theme.colors[props.variant]
-    : props.bg || theme.colors.light;
+    : theme.colors[props.bg] || props.bg || theme.colors.light;
   return {
     ':hover': {
       background: darken(0.06, backgroundColor),
