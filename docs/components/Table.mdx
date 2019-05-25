@@ -1,0 +1,82 @@
+---
+name: Table
+menu: Components
+route: /components/table
+---
+
+import { Playground, Props } from 'docz';
+
+import { Table, Badge } from '../../src';
+
+# Table
+
+## Basic usage
+
+<Playground>
+  {() => {
+    const data = [
+      {
+        position: 1,
+        team: 'Palmeiras',
+        playedGames: 12,
+        won: 7,
+        draw: 4,
+        lost: 1,
+        points: 25,
+        goalsFor: 13,
+        goalsAgainst: 5,
+        goalDifference: 8,
+      },
+      {
+        position: 2,
+        team: 'Novorizontino',
+        playedGames: 12,
+        won: 5,
+        draw: 5,
+        lost: 2,
+        points: 20,
+        goalsFor: 10,
+        goalsAgainst: 9,
+        goalDifference: 1,
+      },
+      {
+        position: 3,
+        team: 'Guarani',
+        playedGames: 12,
+        won: 4,
+        draw: 2,
+        lost: 6,
+        points: 14,
+        goalsFor: 13,
+        goalsAgainst: 18,
+        goalDifference: -5,
+      },
+      {
+        position: 4,
+        team: 'São Bento',
+        playedGames: 12,
+        won: 1,
+        draw: 4,
+        lost: 7,
+        points: 7,
+        goalsFor: 8,
+        goalsAgainst: 18,
+        goalDifference: -10,
+      },
+    ];
+
+    return <Table
+              data={data}
+              labels={{position: '#'}}
+              sortables={['goalsFor', 'goalsAgainst', 'goalDifference']}
+              striped
+              hoverable
+            />;
+
+}}
+
+</Playground>
+
+## Props
+
+<Props of={Table} />
