@@ -36,20 +36,21 @@ npm i @rebasejs/rebase
 - [Heading](https://rebasejs.com/components/heading)
 - [Image](https://rebasejs.com/components/image)
 - [Link](https://rebasejs.com/components/link)
+- [Table](https://rebasejs.com/components/table)
 - [Text](https://rebasejs.com/components/text)
 
 ### Usage
 
 ```jsx
-import React from 'react'
-import { Box, Heading, Button } from '@rebasejs/rebase'
+import React from 'react';
+import { Box, Heading, Button } from '@rebasejs/rebase';
 
 export default () => (
   <Box>
     <Heading>Hello</Heading>
     <Button variant="primary">Rebase</Button>
   </Box>
-)
+);
 ```
 
 ### Related
