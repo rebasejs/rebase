@@ -49,9 +49,6 @@
     "react-testing-library": "^7.0.1",
     "react-test-renderer": "^16.8.6"
   },
-  "np": {
-    "contents": "dist"
-  },
   "jest": {
     "testMatch": [
       "**/test/**/*.js"
