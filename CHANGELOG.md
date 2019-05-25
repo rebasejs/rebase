@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/rebasejs/rebase/compare/1.1.1...v1.2.0) (2019-05-25)
+
+
+### Features
+
+* add table component ([65f73ad](https://github.com/rebasejs/rebase/commit/65f73ad))
+
+
+
 ## [1.1.1](https://github.com/rebasejs/rebase/compare/8364112...1.1.1) (2019-05-24)
 
 
